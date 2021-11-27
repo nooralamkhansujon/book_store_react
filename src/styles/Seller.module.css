@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.tabColor {
+  /* color: var(--text-color) !important; */
+  color: #ec619f !important;
+}
+
+.seller_components {
+  border: var(--light-border) !important;
+  width: 60%;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(236, 97, 169, 0.1)),
+    var(--tw-ring-shadow, 0 0 rgba(236, 97, 169, 0.1)), var(--tw-shadow);
+  background: #fff;
+  border-radius: 10px;
+}
+
+.title {
+  color: var(--text-color) !important;
+  font-size: 1.5rem !important;
+  text-decoration: none !important;
+  border-bottom: 3px solid var(--border-color) !important;
+}
+
+.seller_header {
+  display: flex;
+  justify-content: center;
+}
+.login_body {
+  margin-top: 2rem;
+  background: #fff;
+}
+
+.button {
+  color: #fff !important;
+  background: var(--button-bg) !important;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  outline: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.form_group {
+  margin: 0.3rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  width: 80%;
+}
+.form_group label {
+  font-size: 1rem;
+  color: var(--text-color);
+  padding: 0 2rem;
+  width: 40%;
+  text-align: left;
+}
+
+.form_group input {
+  padding: 1rem 1rem;
+  outline: none;
+  border: 1px solid rgba(236, 97, 169, 0.1);
+  /* border-color: #ec619f !important; */
+  border-radius: 5px;
+  /* border: none !important; */
+  width: 60%;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(236, 97, 169, 0.1)),
+    var(--tw-ring-shadow, 0 0 rgba(236, 97, 169, 0.1)), var(--tw-shadow);
+}
+
+.rememberMe {
+  margin-left: 15%;
+  width: 58%;
+  /* text-align: left; */
+  padding-left: 2rem;
+}
+.rememberMe input[type="checkbox"] {
+  margin-right: 10px;
+  background: #ec619f !important;
+}
+
+.selectBox {
+  width: 60%;
+  margin-top: 10px;
+  height: 40px;
+  padding: 1rem 1rem;
+}

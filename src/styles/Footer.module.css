@@ -1,0 +1,45 @@
+.footer {
+  /* margin: 1.5rem; */
+  /* background: #20232a; */
+  background: linear-gradient(to left, rgba(20, 56, 92), rgba(20, 56, 92, 0.9));
+}
+
+.footer_container {
+  margin: 2rem 2rem 0 2rem !important;
+  padding: 2rem;
+}
+
+.footer_nav {
+  list-style: none !important;
+}
+.footer_nav li a {
+  color: #fff;
+  text-decoration: none !important;
+}
+
+.subscribe_box input {
+  padding: 1rem 1rem;
+  outline: none;
+  border: 1px solid rgba(236, 97, 169, 0.1);
+  /* border-color: #ec619f !important; */
+  border-radius: 5px;
+  /* border: none !important; */
+  width: 50%;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(236, 97, 169, 0.1)),
+    var(--tw-ring-shadow, 0 0 rgba(236, 97, 169, 0.1)), var(--tw-shadow);
+}
+
+.button {
+  color: #fff !important;
+  background: var(--button-bg) !important;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid var(--border-color);
+  outline: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}

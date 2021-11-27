@@ -1,0 +1,86 @@
+.books_segments {
+  margin: 0.5rem 0;
+  --tw-shadow: 0 20px 25px -5px rgba(236, 97, 169, 0.1),
+    0 10px 10px -5px rgba(236, 97, 169, 0.1);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  padding: 1rem 1rem;
+  background: #fff;
+}
+
+/* single book css  */
+.book_title {
+  color: var(--text-color) !important;
+  font-size: 1.2rem;
+}
+.card_contain:hover {
+  --tw-shadow: 0 20px 25px -5px rgba(236, 97, 169, 0.1),
+    0 10px 10px -5px rgba(236, 97, 169, 0.1);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  cursor: pointer;
+}
+.card_contain p,
+.card_contain strike {
+  color: #6caba6;
+  font-weight: bold;
+}
+
+.card_contain a {
+  text-decoration: none !important;
+}
+
+.book_img {
+  object-fit: contain !important;
+}
+.book_list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartButtons {
+  display: flex;
+  justify-content: center;
+}
+.cartButtons button:first-child {
+  border-radius: 5px;
+  background: #ec619f;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.cartButtons button {
+  text-transform: uppercase;
+  font-size: 1rem;
+  /* color: #20232a; */
+  color: #ec619f;
+}
+.book_price_content {
+  display: flex;
+  justify-content: space-between;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+}
+.stock_status_active {
+  background: rgba(45, 195, 80, 0.9) !important;
+}
+.stock_status_active,
+.stock_status_in_active {
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  height: 30px;
+  padding: 0.5rem !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+.stock_status_in_active {
+  /* color: red; */
+
+  background: rgba(244, 81, 30, 0.9) !important;
+}
+/* single book css  */
