@@ -84,12 +84,19 @@ function Header() {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link style={{ textDecoration: "none" }} to="/profile">
+                  My Account
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>My Orders</MenuItem>
+              <MenuItem onClick={handleClose}>My List</MenuItem>
+              <MenuItem onClick={handleClose}>My Point</MenuItem>
+              <MenuItem onClick={handleClose}>Review</MenuItem>
               <MenuItem onClick={handleClose}>Logout</MenuItem>
             </Menu>
             {/* end of profile nav  */}
-            <MaterialLink href="#">
+            <NavLink to="/cart">
               <Badge badgeContent={4} color="primary">
                 <ShoppingCartSharpIcon
                   className={styles.cart}
@@ -97,7 +104,7 @@ function Header() {
                   color="action"
                 />
               </Badge>
-            </MaterialLink>{" "}
+            </NavLink>{" "}
             <NavLink to="/login-register">
               <LoginIcon
                 className={styles.cart}
@@ -230,14 +237,14 @@ function Header() {
               >
                 Home
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 className={(navInfo) =>
                   navInfo.isActive ? `${styles.activeNav}` : ""
                 }
                 to="/"
               >
                 Buy{" "}
-              </NavLink>
+              </NavLink> */}
               <NavLink
                 className={(navInfo) =>
                   navInfo.isActive ? `${styles.activeNav}` : ""
@@ -262,14 +269,14 @@ function Header() {
               >
                 Give Away{" "}
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 className={(navInfo) =>
                   navInfo.isActive ? `${styles.activeNav}` : ""
                 }
                 to="/"
               >
                 Recomendation{" "}
-              </NavLink>
+              </NavLink> */}
             </div>
           </Grid>
         </Grid>

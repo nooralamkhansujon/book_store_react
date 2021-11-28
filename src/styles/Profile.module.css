@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile_box {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  --tw-shadow: 0 20px 25px -5px rgba(236, 97, 169, 0.3),
+    0 10px 10px -5px rgba(236, 97, 169, 0.4);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.profile_sm_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+.hello {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.profile_user {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.profile_nav {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  /* display: flex; */
+  align-items: center;
+  --tw-shadow: 0 20px 25px -5px rgba(236, 97, 169, 0.3),
+    0 10px 10px -5px rgba(236, 97, 169, 0.4);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.nav {
+  border-bottom: 1px solid rgba(0, 30, 60, 0.2) !important;
+  padding: 0.6rem;
+  font-size: 1.3rem !important;
+}
+.nav:hover,
+.activeNav {
+  background: #001e3c !important;
+  border-top: 1px dashed #001e3c !important;
+  border-bottom: none !important;
+}
+
+.nav:hover a,
+.activeNav a {
+  color: #fff !important;
+}
+.nav a {
+  text-decoration: none;
+  color: #001e3c;
+}
+.profile_content_box {
+}
+.card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 30, 60, 0.9);
+  margin-bottom: 10px;
+  padding: 1rem;
+}
+.change_info {
+  color: #fff;
+  background: #001e3c;
+  outline: none !important;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.change_info:hover {
+  color: #fff !important;
+  background: rgba(0, 30, 60, 0.8);
+}
+.card_body {
+  padding: 1rem;
+}
+.form_group {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.form_group label {
+  margin-bottom: 1rem;
+}
+.form_group input[type="text"],
+input {
+  width: 60%;
+  padding: 1.5rem 1rem;
+  outline: none;
+  font-size: 1rem;
+  border: 1px solid rgba(236, 97, 169, 0.1);
+  border-radius: 5px;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(236, 97, 169, 0.1)),
+    var(--tw-ring-shadow, 0 0 rgba(236, 97, 169, 0.1)), var(--tw-shadow);
+}
+
+.form_group input[type="text"] {
+  text-transform: capitalize;
+}
+
+.radio_group {
+}

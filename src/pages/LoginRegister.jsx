@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import Container from "@mui/material/Container";
 
 import styles from "../styles/Login.module.css";
 function LoginRegister() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, []);
   return (
     <div>
       <Container>

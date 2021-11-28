@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Container from "@mui/material/Container";
 import Checkbox from "@mui/material/Checkbox";
 import Typography from "@mui/material/Typography";
@@ -14,6 +14,13 @@ function RegisterSeller() {
   const [price, setPrice] = React.useState();
   const [image, setImage] = React.useState();
   const [status, setStatus] = React.useState();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, []);
 
   function handleImage(e) {
     setImage(e.target.files[0]);

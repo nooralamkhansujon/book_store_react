@@ -15,7 +15,6 @@ body {
     0 10px 10px -5px rgba(236, 97, 169, 0.1);
   --light-border: 1px solid rgba(236, 97, 169, 0.2);
   --button-bg: #ec619f;
-  --global-text-color: #001e3c;
 }
 
 .main {
@@ -34,4 +33,34 @@ body {
 .breadcumb {
   background: #fff;
   padding: 0.5rem 1rem;
+}
+
+.load_button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.load_more,
+.load_more_link {
+  font-size: 1.8rem;
+  margin: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  background: transparent;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.load_more {
+  color: #ec619f !important;
+}
+.load_more_link {
+  text-decoration: none !important;
+  color: #ec619f !important;
+}
+.load_more_link:hover,
+.load_more:hover {
+  text-decoration: none !important;
+  color: var(--text-color) !important;
 }

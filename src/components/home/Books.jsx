@@ -1,12 +1,9 @@
 import React from "react";
 import Book from "./Book.jsx";
 import Typography from "@mui/material/Typography";
-import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import styles from "../../styles/Home.module.css";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-function Books({ title }) {
+function Books({ title, books, load }) {
   function onClickItem(event) {
     console.log(event);
   }
@@ -22,31 +19,21 @@ function Books({ title }) {
         {title}
       </Typography>
       <Grid container rowSpacing={2} columnSpacing={1}>
-        <Grid item md={3}>
-          <Book image="1.jpg" />
-        </Grid>
-        <Grid item md={3}>
-          <Book image="2.jpg" />
-        </Grid>
-        <Grid item md={3}>
-          <Book image="3.jpg" />
-        </Grid>
-        <Grid item md={3}>
-          <Book image="4.jpg" />
-        </Grid>
-        <Grid item md={3}>
-          <Book image="7.jpg" />
-        </Grid>
-        <Grid item md={3}>
-          <Book image="8.jpg" />
-        </Grid>
-        <Grid item md={3}>
-          <Book image="10.jpg" />
-        </Grid>
-        <Grid item md={3}>
-          <Book image="11.jpg" />
-        </Grid>
+        {books.map((book, index) => (
+          <Grid item md={3} key={index}>
+            <Book book={book} />
+          </Grid>
+        ))}
       </Grid>
+      <div className="load_button_container">
+        {load ? (
+          <button className="load_more">Load More</button>
+        ) : (
+          <a href="/" className="load_more_link">
+            See More
+          </a>
+        )}
+      </div>
     </div>
   );
 }

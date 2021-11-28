@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
-import { Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 import styles from "../styles/Cart.module.css";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import DeleteIcon from "@mui/icons-material/Delete";
-
 import { CartCartSummery, CartSingleCart } from "../components";
 const label = { inputProps: { "aria-label": "All" } };
 function Cart() {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }, []);
   function checkedAll(event) {}
   return (
     <div className="container">

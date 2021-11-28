@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* :root {
+  --gray-color: #f6f6f6;
+} */
+.details_image {
+  width: 100%;
+  border: 1px solid #001e3c;
+  text-align: center;
+}
+.details_image > img {
+  max-width: 300px;
+  width: 100%;
+  height: 300px;
+  /* object-fit: cover; */
+}
+
+.thumbimage__section {
+  display: flex;
+  margin: 1rem 0.5rem;
+  justify-content: center;
+}
+.thumbimage__section img {
+  width: 60px;
+  height: 60px;
+  margin-left: 5px;
+  border: 1px solid #001e3c;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book_info {
+  padding: 1rem;
+}
+.book_name {
+  color: var(--global-text-color) !important;
+  margin-bottom: 0.5rem;
+}
+.writer {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.writer a,
+.category a {
+  text-decoration: none !important;
+}
+.category,
+.rating {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.price {
+  color: var(--text-color) !important;
+}
+.discount_price {
+  color: #666666 !important;
+}
+.price,
+.discount_price {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.price_savings {
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+.savings {
+  margin-left: 0.5rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #666666;
+}
+
+.stock_active {
+  color: #33c24d !important;
+}
+
+.stock_active_icon {
+  color: #fff !important;
+  background: #33c24d !important;
+}
+.stock_in_active_icon {
+  color: #fff !important;
+  background: #dc3545 !important;
+}
+
+.stock_in_active,
+.stock_msg {
+  color: #dc3545 !important ;
+  font-weight: 500;
+}
+.stock_active {
+  /* color: #9999 !important; */
+  font-weight: 500;
+}
+
+.stock_in_active_icon,
+.stock_active_icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0.1rem;
+  color: #fff;
+  font-size: 1rem !important;
+}
+.button_section {
+  margin: 0.5rem 0 0.5rem 0;
+}
+.button {
+  padding: 0.8rem 2rem !important;
+  height: 50px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.read_button {
+  margin-right: 0.3rem;
+  color: #33c24d;
+  border: 1px solid #33c24d;
+}
+.cart_button {
+  background: rgba(255, 173, 51) !important;
+  color: #fff;
+  border: 1px solid rgba(255, 173, 51) !important;
+  font-weight: bold;
+  padding: 0.4rem 2rem !important;
+}
+
+.cart_button:hover {
+  background: rgba(255, 173, 51, 0.8) !important;
+}
+
+.store_section {
+  display: flex;
+}
+.wishDiv {
+  margin-right: 1rem;
+}
+.shareDiv {
+  margin-left: 1rem;
+}
+.wishDiv button {
+  padding: 0.5rem 1rem;
+  color: #666666 !important;
+  font-weight: 500;
+  background: transparent !important;
+  outline: none !important;
+  border: none !important;
+  font-size: 1rem;
+  cursor: pointer !important;
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.wishlist li a,
+.share_list li a {
+  list-style: none;
+  padding: 0.5rem 1rem;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.wishlist li a:hover,
+.share_list li a:hover {
+  color: #fff !important;
+}
+
+.form_group {
+  margin: 0.3rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+  width: 80%;
+}
+
+.form_group label {
+  font-size: 1rem;
+  color: var(--text-color);
+  padding: 0 2rem;
+  width: 40%;
+  text-align: left;
+}
+
+.form_group input {
+  padding: 1rem 1rem;
+  outline: none;
+  border: 1px solid rgba(236, 97, 169, 0.1);
+  /* border-color: #ec619f !important; */
+  border-radius: 5px;
+  /* border: none !important; */
+  width: 60%;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(236, 97, 169, 0.1)),
+    var(--tw-ring-shadow, 0 0 rgba(236, 97, 169, 0.1)), var(--tw-shadow);
+}
+
+.cart_content h3 {
+  color: var(--global-text-color);
+}
+.weight {
+  color: lightgreen;
+  font-weight: bold;
+}
+.selectBox {
+  width: 100%;
+  margin-top: 10px;
+  height: 40px;
+  padding: 1rem 1rem;
+}
+.priceContent {
+  padding: 1rem;
+}
+.single_group {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(236, 97, 169, 0.1);
+  color: var(--global-text-color);
+  padding: 0.5rem;
+  text-transform: capitalize;
+}
+.single_group p:last-child {
+  font-weight: bold;
+}
