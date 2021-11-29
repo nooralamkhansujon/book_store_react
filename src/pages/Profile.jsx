@@ -117,7 +117,12 @@ function Cart() {
                 My Ratings & Reviews
               </NavLink>
             </Typography>
-            <Typography variant="h5" className={styles.nav}>
+            <Typography
+              variant="h5"
+              className={`${styles.nav} ${
+                activeNav == "myRokomariBalance" ? styles.activeNav : ""
+              }`}
+            >
               {" "}
               <NavLink
                 to="myRokomariBalance"
