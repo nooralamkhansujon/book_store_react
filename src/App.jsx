@@ -1,4 +1,15 @@
-import { Header, Footer, Login, Register } from "./components";
+import {
+  Header,
+  Footer,
+  Login,
+  Register,
+  ProfileAccount,
+  ProfileMyLists,
+  ProfileMyRatingReviews,
+  ProfileMyRokomariBalance,
+  ProfileWishList,
+  ProfileOrders,
+} from "./components";
 import { Route, Routes } from "react-router-dom";
 import {
   Home,
@@ -26,7 +37,20 @@ function App() {
           <Route path="/books/details/:book_id" element={<BookDetails />} />
           <Route path="/register-seller" element={<RegisterSeller />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile/*" element={<Profile />}>
+            <Route path="account" element={<ProfileAccount />} />
+            <Route path="myList" element={<ProfileMyLists />} />
+            <Route path="orders" element={<ProfileOrders />} />
+            <Route path="wishlist" element={<ProfileWishList />} />
+            <Route
+              path="myRokomariBalance"
+              element={<ProfileMyRokomariBalance />}
+            />
+            <Route
+              path="MyRatingAndReviews"
+              element={<ProfileMyRatingReviews />}
+            />
+          </Route>
         </Routes>
       </main>
       <Footer />

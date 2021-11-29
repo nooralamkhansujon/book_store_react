@@ -85,14 +85,35 @@ function Header() {
               }}
             >
               <MenuItem onClick={handleClose}>
-                <Link style={{ textDecoration: "none" }} to="/profile">
+                <Link style={{ textDecoration: "none" }} to="/profile/account">
                   My Account
                 </Link>
               </MenuItem>
-              <MenuItem onClick={handleClose}>My Orders</MenuItem>
-              <MenuItem onClick={handleClose}>My List</MenuItem>
-              <MenuItem onClick={handleClose}>My Point</MenuItem>
-              <MenuItem onClick={handleClose}>Review</MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link style={{ textDecoration: "none" }} to="/profile/orders">
+                  My Orders
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link style={{ textDecoration: "none" }} to="/profile/myList">
+                  My List
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link style={{ textDecoration: "none" }} to="/profile/myList">
+                  My Point
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link style={{ textDecoration: "none" }} to="/profile/myList">
+                  Ratings & Review
+                </Link>
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <Link style={{ textDecoration: "none" }} to="/profile/wishlist">
+                  My WishList
+                </Link>
+              </MenuItem>
               <MenuItem onClick={handleClose}>Logout</MenuItem>
             </Menu>
             {/* end of profile nav  */}

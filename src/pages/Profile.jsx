@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { Grid, Typography } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -12,6 +12,7 @@ import styles from "../styles/Profile.module.css";
 import { CartSingleCart } from "../components";
 const label = { inputProps: { "aria-label": "All" } };
 function Cart() {
+  const [activeNav, setActiveNav] = React.useState(false);
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -37,83 +38,108 @@ function Cart() {
           </Card>
           {/*end of  profile image and name  */}
           <Card className={styles.profile_nav}>
-            <Typography variant="h5" className={styles.nav}>
-              <NavLink to="/">My Accounts</NavLink>
+            <Typography
+              variant="h5"
+              className={`${styles.nav} ${
+                activeNav == "account" ? styles.activeNav : ""
+              }`}
+            >
+              <NavLink
+                to="account"
+                className={(navInfo) =>
+                  navInfo.isActive ? setActiveNav("account") : ``
+                }
+              >
+                My Accounts
+              </NavLink>
+            </Typography>
+            <Typography
+              variant="h5"
+              className={`${styles.nav} ${
+                activeNav == "orders" ? styles.activeNav : ""
+              }`}
+            >
+              {" "}
+              <NavLink
+                to="orders"
+                className={(navInfo) =>
+                  navInfo.isActive ? setActiveNav("orders") : ``
+                }
+              >
+                My Orders
+              </NavLink>
+            </Typography>
+            <Typography
+              variant="h5"
+              className={`${styles.nav} ${
+                activeNav == "myList" ? styles.activeNav : ""
+              }`}
+            >
+              {" "}
+              <NavLink
+                to="myList"
+                className={(navInfo) =>
+                  navInfo.isActive ? setActiveNav("myList") : ``
+                }
+              >
+                My Lists
+              </NavLink>
+            </Typography>
+            <Typography
+              variant="h5"
+              className={`${styles.nav} ${
+                activeNav == "wishlist" ? styles.activeNav : ""
+              }`}
+            >
+              {" "}
+              <NavLink
+                to="wishlist"
+                className={(navInfo) =>
+                  navInfo.isActive ? setActiveNav("wishlist") : ``
+                }
+              >
+                My Wishlist
+              </NavLink>
+            </Typography>
+            <Typography
+              variant="h5"
+              className={`${styles.nav} ${
+                activeNav == "MyRatingAndReviews" ? styles.activeNav : ""
+              }`}
+            >
+              {" "}
+              <NavLink
+                to="MyRatingAndReviews"
+                className={(navInfo) =>
+                  navInfo.isActive ? setActiveNav("MyRatingAndReviews") : ``
+                }
+              >
+                My Ratings & Reviews
+              </NavLink>
             </Typography>
             <Typography variant="h5" className={styles.nav}>
               {" "}
-              <NavLink to="/">My Orders</NavLink>
+              <NavLink
+                to="myRokomariBalance"
+                className={(navInfo) =>
+                  navInfo.isActive ? setActiveNav("myRokomariBalance") : ``
+                }
+              >
+                My Rokomari Balance
+              </NavLink>
             </Typography>
-            <Typography variant="h5" className={styles.nav}>
-              {" "}
-              <NavLink to="/">My Lists</NavLink>
-            </Typography>
-            <Typography variant="h5" className={styles.nav}>
-              {" "}
-              <NavLink to="/">My Wishlist</NavLink>
-            </Typography>
-            <Typography variant="h5" className={styles.nav}>
-              {" "}
-              <NavLink to="/">My Ratings & Reviews</NavLink>
-            </Typography>
-            <Typography variant="h5" className={styles.nav}>
-              {" "}
-              <NavLink to="/">My Rokomari Balance</NavLink>
-            </Typography>
-            <Typography variant="h5" className={styles.nav}>
+            {/* <Typography variant="h5" className={styles.nav}>
               {" "}
               <NavLink to="/">My Points</NavLink>
-            </Typography>
-            <Typography variant="h5" className={styles.nav}>
-              {" "}
-              <NavLink to="/">My Points</NavLink>
-            </Typography>
-            <Typography variant="h5" className={styles.nav}>
+            </Typography> */}
+            {/* <Typography variant="h5" className={styles.nav}>
               {" "}
               <NavLink to="/">Load Gift Voucher</NavLink>
-            </Typography>
+            </Typography> */}
           </Card>
         </Grid>
         <Grid item md={9}>
-          <Card className={styles.profile_content_box}>
-            <div className={styles.card_header}>
-              <Typography variant="h5">Personal Information </Typography>
-              <button className={styles.change_info}>change Information</button>
-            </div>
-            <div className={styles.card_body}>
-              <form>
-                <div className={styles.form_group}>
-                  <label>Name</label>
-                  <input type="text" placeholder="profile Name" />
-                </div>
-                <div className={styles.form_group}>
-                  <label>Your Date of Birth</label>
-                  <input type="date" />
-                </div>
-                <div className={styles.form_group}>
-                  <label>Gender</label>
-                  <RadioGroup
-                    aria-label="gender"
-                    defaultValue="female"
-                    name="radio-buttons-group"
-                    className={styles.radio_group}
-                    row
-                  >
-                    <FormControlLabel
-                      value="female"
-                      control={<Radio />}
-                      label="Female"
-                    />
-                    <FormControlLabel
-                      value="male"
-                      control={<Radio />}
-                      label="Male"
-                    />
-                  </RadioGroup>
-                </div>
-              </form>
-            </div>
-          </Card>
+          <Outlet />
         </Grid>
       </Grid>
     </div>
