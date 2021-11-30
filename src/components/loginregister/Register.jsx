@@ -31,7 +31,7 @@ function Register() {
         <label>Remember Me</label>
       </div>
       <div className={`${styles.form_group}`}>
-        <button className={styles.button}>register</button>
+        <button className={styles.button}>Register</button>
       </div>
     </div>
   );

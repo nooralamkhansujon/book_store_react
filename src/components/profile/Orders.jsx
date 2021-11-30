@@ -25,7 +25,7 @@ function Orders() {
         <div className={styles.cart_header__left}>
           <Typography variant="h5">My Orders</Typography>
           <p>
-            Your Total Orders: <span className={styles.total_orders}>0</span>
+            Your Total Orders: <span className={styles.total_orders}>6</span>
           </p>
         </div>
         <div className={styles.cart_header_right}>

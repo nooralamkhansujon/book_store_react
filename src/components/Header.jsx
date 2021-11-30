@@ -126,7 +126,7 @@ function Header() {
                 />
               </Badge>
             </NavLink>{" "}
-            <NavLink to="/login-register">
+            <NavLink to="/login-register/login">
               <LoginIcon
                 className={styles.cart}
                 style={{ fontSize: 30 }}
@@ -258,14 +258,6 @@ function Header() {
               >
                 Home
               </NavLink>
-              {/* <NavLink
-                className={(navInfo) =>
-                  navInfo.isActive ? `${styles.activeNav}` : ""
-                }
-                to="/"
-              >
-                Buy{" "}
-              </NavLink> */}
               <NavLink
                 className={(navInfo) =>
                   navInfo.isActive ? `${styles.activeNav}` : ""
@@ -274,30 +266,31 @@ function Header() {
               >
                 Sell{" "}
               </NavLink>
-              <NavLink
-                className={(navInfo) =>
-                  navInfo.isActive ? `${styles.activeNav}` : ""
-                }
-                to="/"
-              >
-                Newly Add{" "}
-              </NavLink>
-              <NavLink
-                className={(navInfo) =>
-                  navInfo.isActive ? `${styles.activeNav}` : ""
-                }
-                to="/"
-              >
-                Give Away{" "}
-              </NavLink>
               {/* <NavLink
                 className={(navInfo) =>
                   navInfo.isActive ? `${styles.activeNav}` : ""
                 }
                 to="/"
               >
-                Recomendation{" "}
+                Newly Add{" "}
               </NavLink> */}
+              {/* <NavLink
+                className={(navInfo) =>
+                  navInfo.isActive ? `${styles.activeNav}` : ""
+                }
+              
+                to="/"
+              >
+                Gifts
+              </NavLink> */}
+              <NavLink
+                className={(navInfo) =>
+                  navInfo.isActive ? `${styles.activeNav}` : ""
+                }
+                to="/institutional-order"
+              >
+                Institutional order
+              </NavLink>
             </div>
           </Grid>
         </Grid>

@@ -19,7 +19,7 @@ function Books({ title, books, load }) {
 
   return (
     <div className={styles.books_segments}>
-      <Container>
+      {/* <Container> */}
         <Typography className="global_title" variant="h4">
           {title}
         </Typography>
@@ -39,7 +39,7 @@ function Books({ title, books, load }) {
             </a>
           )}
         </div>
-      </Container>
+      {/* </Container> */}
     </div>
   );
 }

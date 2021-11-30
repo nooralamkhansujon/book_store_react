@@ -8,9 +8,12 @@ import {
   CardContent,
   CardMedia,
   Grid,
+  
 } from "@mui/material";
+import DeleteIcon from '@mui/icons-material/Delete';
 import { Link } from "react-router-dom";
 import styles from "../../styles/Profile.module.css";
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function WishList() {
   return (
@@ -19,135 +22,208 @@ function WishList() {
         <div className={styles.cart_header__left}>
           <Typography variant="h5">My Wishlist</Typography>
           <p>
-            You have <span className={styles.total_orders}>1</span> product(s)
-            in your wishlis:
+            You have <span className={styles.total_orders}>5</span> product(s)
+            in your wishlist:
           </p>
         </div>
-        <button className={styles.change_info}>Change Information</button>
+        {/* <button className={styles.change_info}>Change Information</button> */}
       </div>
       <div className={styles.card_body}>
-        <Grid container rowSpacing={2} columnSpacing={1}>
-          <Grid item md={3}>
-            <Card className={styles.card_contain} sx={{ maxWidth: 250 }}>
-              <Link to="/">
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="200"
-                  className={styles.book_img}
-                  image={`/assets/images/1.jpg`}
-                />
-              </Link>
-
-              <CardContent>
-                <Typography
-                  className={styles.book_title}
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                >
-                  programming book
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item md={3}>
-            <Card className={styles.card_contain} sx={{ maxWidth: 250 }}>
-              <Link to="/">
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="200"
-                  className={styles.book_img}
-                  image={`/assets/images/1.jpg`}
-                />
-              </Link>
-
-              <CardContent>
-                <Typography
-                  className={styles.book_title}
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                >
-                  programming book
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item md={3}>
-            <Card className={styles.card_contain} sx={{ maxWidth: 250 }}>
-              <Link to="/">
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="200"
-                  className={styles.book_img}
-                  image={`/assets/images/1.jpg`}
-                />
-              </Link>
-
-              <CardContent>
-                <Typography
-                  className={styles.book_title}
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                >
-                  programming book
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item md={3}>
-            <Card className={styles.card_contain} sx={{ maxWidth: 250 }}>
-              <Link to="/">
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="200"
-                  className={styles.book_img}
-                  image={`/assets/images/1.jpg`}
-                />
-              </Link>
-
-              <CardContent>
-                <Typography
-                  className={styles.book_title}
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                >
-                  programming book
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item md={3}>
-            <Card className={styles.card_contain} sx={{ maxWidth: 250 }}>
-              <Link to="/">
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="200"
-                  className={styles.book_img}
-                  image={`/assets/images/1.jpg`}
-                />
-              </Link>
-
-              <CardContent>
-                <Typography
-                  className={styles.book_title}
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                >
-                  programming book
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
+        {/* single wishlist item */}
+        <Card className={`${styles.card_contain} my-3`}>
+            <Grid container rowSpacing={2} columnSpacing={1}>
+              <Grid item md={3}>
+                <Link to="/">
+                    <CardMedia
+                      component="img"
+                      alt="green iguana"
+                      height="200"
+                      className={styles.book_img}
+                      image={`/assets/images/1.jpg`}
+                    />
+                  </Link>
+              </Grid>
+              <Grid item md={6}>
+                 <CardContent>
+                    <Typography
+                      className={styles.book_title}
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                    >
+                      নীল ডায়েরির নোনতা পাতা
+                    </Typography>
+                    <p className={styles.book_writer}>হাশিম কিয়াম</p>
+                     <div className="d-flex justify-content-between" style={{width:"35%"}}>
+                      <span>Tk: 220</span>
+                       <p><strike >Tk: 170</strike></p>
+                    </div>
+                    <p>1 Ratings |</p>
+                    <button className="btn btn-outline-warning  btn-lg"> <ShoppingCartIcon/>Pre Order</button>
+                  </CardContent>
+              </Grid>
+              <Grid item md={3} className="d-flex justify-content-end align-items-center p-5">
+                <button className="btn btn-sm btn-danger"><DeleteIcon/></button>
+              </Grid>
+            </Grid>
+        </Card>
+        {/* end of single wishlist item  */}
+        {/* single wishlist item */}
+        <Card className={`${styles.card_contain} my-3`}>
+            <Grid container rowSpacing={2} columnSpacing={1}>
+              <Grid item md={3}>
+                <Link to="/">
+                    <CardMedia
+                      component="img"
+                      alt="green iguana"
+                      height="200"
+                      className={styles.book_img}
+                      image={`/assets/images/1.jpg`}
+                    />
+                  </Link>
+              </Grid>
+              <Grid item md={6}>
+                 <CardContent>
+                    <Typography
+                      className={styles.book_title}
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                    >
+                      নীল ডায়েরির নোনতা পাতা
+                    </Typography>
+                    <p className={styles.book_writer}>হাশিম কিয়াম</p>
+                     <div className="d-flex justify-content-between" style={{width:"35%"}}>
+                      <span>Tk: 220</span>
+                       <p><strike >Tk: 170</strike></p>
+                    </div>
+                    <p>1 Ratings |</p>
+                    <button className="btn btn-outline-warning  btn-lg"> <ShoppingCartIcon/>Pre Order</button>
+                  </CardContent>
+              </Grid>
+              <Grid item md={3} className="d-flex justify-content-end align-items-center p-5">
+                <button className="btn btn-sm btn-danger"><DeleteIcon/></button>
+              </Grid>
+            </Grid>
+        </Card>
+        {/* end of single wishlist item  */}
+        {/* single wishlist item */}
+        <Card className={`${styles.card_contain} my-3`}>
+            <Grid container rowSpacing={2} columnSpacing={1}>
+              <Grid item md={3}>
+                <Link to="/">
+                    <CardMedia
+                      component="img"
+                      alt="green iguana"
+                      height="200"
+                      className={styles.book_img}
+                      image={`/assets/images/1.jpg`}
+                    />
+                  </Link>
+              </Grid>
+              <Grid item md={6}>
+                 <CardContent>
+                    <Typography
+                      className={styles.book_title}
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                    >
+                      নীল ডায়েরির নোনতা পাতা
+                    </Typography>
+                    <p className={styles.book_writer}>হাশিম কিয়াম</p>
+                     <div className="d-flex justify-content-between" style={{width:"35%"}}>
+                      <span>Tk: 220</span>
+                       <p><strike >Tk: 170</strike></p>
+                    </div>
+                    <p>1 Ratings |</p>
+                    <button className="btn btn-outline-warning  btn-lg"> <ShoppingCartIcon/>Pre Order</button>
+                  </CardContent>
+              </Grid>
+              <Grid item md={3} className="d-flex justify-content-end align-items-center p-5">
+                <button className="btn btn-sm btn-danger"><DeleteIcon/></button>
+              </Grid>
+            </Grid>
+        </Card>
+        {/* end of single wishlist item  */}
+        {/* single wishlist item */}
+        <Card className={`${styles.card_contain} my-3`}>
+            <Grid container rowSpacing={2} columnSpacing={1}>
+              <Grid item md={3}>
+                <Link to="/">
+                    <CardMedia
+                      component="img"
+                      alt="green iguana"
+                      height="200"
+                      className={styles.book_img}
+                      image={`/assets/images/1.jpg`}
+                    />
+                  </Link>
+              </Grid>
+              <Grid item md={6}>
+                 <CardContent>
+                    <Typography
+                      className={styles.book_title}
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                    >
+                      নীল ডায়েরির নোনতা পাতা
+                    </Typography>
+                    <p className={styles.book_writer}>হাশিম কিয়াম</p>
+                    <div className="d-flex justify-content-between" style={{width:"35%"}}>
+                      <span>Tk: 220</span>
+                       <p><strike >Tk: 170</strike></p>
+                    </div>
+                    <p>1 Ratings |</p>
+                    <button className="btn btn-outline-warning  btn-lg"> <ShoppingCartIcon/>Pre Order</button>
+                  </CardContent>
+              </Grid>
+              <Grid item md={3} className="d-flex justify-content-end align-items-center p-5">
+                <button className="btn btn-sm btn-danger"><DeleteIcon/></button>
+              </Grid>
+            </Grid>
+        </Card>
+        {/* end of single wishlist item  */}
+        {/* single wishlist item */}
+        <Card className={`${styles.card_contain} my-3`}>
+            <Grid container rowSpacing={2} columnSpacing={1}>
+              <Grid item md={3}>
+                <Link to="/">
+                    <CardMedia
+                      component="img"
+                      alt="green iguana"
+                      height="200"
+                      className={styles.book_img}
+                      image={`/assets/images/1.jpg`}
+                    />
+                  </Link>
+              </Grid>
+              <Grid item md={6}>
+                 <CardContent>
+                    <Typography
+                      className={styles.book_title}
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                    >
+                      নীল ডায়েরির নোনতা পাতা
+                    </Typography>
+                    <p className={styles.book_writer}>হাশিম কিয়াম</p>
+                     <div className="d-flex justify-content-between" style={{width:"35%"}}>
+                      <span>Tk: 220</span>
+                       <p><strike >Tk: 170</strike></p>
+                    </div>
+                    <p>1 Ratings |</p>
+                    <button className="btn btn-outline-warning  btn-lg"> <ShoppingCartIcon/>Pre Order</button>
+                  </CardContent>
+              </Grid>
+              <Grid item md={3} className="d-flex justify-content-end align-items-center p-5">
+                <button className="btn btn-sm btn-danger"><DeleteIcon/></button>
+              </Grid>
+            </Grid>
+        </Card>
+        {/* end of single wishlist item  */}
       </div>
     </Card>
   );

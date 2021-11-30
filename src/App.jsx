@@ -19,6 +19,7 @@ import {
   Cart,
   BookDetails,
   Profile,
+  InstitutionalOrder,
 } from "./pages/";
 import "./index.css";
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <Route path="/books/details/:book_id" element={<BookDetails />} />
           <Route path="/register-seller" element={<RegisterSeller />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/institutional-order" element={<InstitutionalOrder />} />
           <Route path="/profile/*" element={<Profile />}>
             <Route path="account" element={<ProfileAccount />} />
             <Route path="myList" element={<ProfileMyLists />} />

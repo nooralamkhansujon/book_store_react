@@ -21,7 +21,7 @@ function Cart() {
           <Card>
             <Box
               className={`${styles.CartTopHeader}`}
-              sx={{ display: "flex", justifyContent: "space-between" }}
+              sx={{ display: "flex", justifyContent: "space-between",alignItems:"center" }}
             >
               <div className={`${styles.rememberMe}`}>
                 <Checkbox

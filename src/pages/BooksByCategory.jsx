@@ -113,9 +113,9 @@ function BooksByCategory() {
           <Link underline="hover" color="inherit" to="/">
             Home
           </Link>
-          <Link underline="hover" color="inherit" to="/">
+          {/* <Link underline="hover" color="inherit" to="/">
             Core
-          </Link>
+          </Link> */}
           <Typography color="text.primary">{category}</Typography>
         </Breadcrumbs>
       </div>
