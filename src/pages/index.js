@@ -6,3 +6,7 @@ export { default as Cart } from "./Cart.jsx";
 export { default as BookDetails } from "./BookDetails.jsx";
 export { default as Profile } from "./Profile.jsx";
 export { default as InstitutionalOrder } from "./InstitutionalOrder.jsx";
+export { default as OrderAsGift } from "./OrderAsGift.jsx";
+export { default as ShippingPage } from "./ShippingPage.jsx";
+export { default as BorrowBooks } from "./BorrowBooks.jsx";
+export { default as GiveWayBooks } from "./GiveWayBooks.jsx";

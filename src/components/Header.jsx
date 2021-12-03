@@ -266,23 +266,22 @@ function Header() {
               >
                 Sell{" "}
               </NavLink>
-              {/* <NavLink
+              <NavLink
                 className={(navInfo) =>
                   navInfo.isActive ? `${styles.activeNav}` : ""
                 }
-                to="/"
+                to="/GiveWayBooks"
               >
-                Newly Add{" "}
-              </NavLink> */}
-              {/* <NavLink
+                Give Away
+              </NavLink>
+              <NavLink
                 className={(navInfo) =>
                   navInfo.isActive ? `${styles.activeNav}` : ""
                 }
-              
-                to="/"
+                to="/BorrowBooks"
               >
-                Gifts
-              </NavLink> */}
+                Borrow Books
+              </NavLink>
               <NavLink
                 className={(navInfo) =>
                   navInfo.isActive ? `${styles.activeNav}` : ""

@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   background: #f1f2f4 !important;
 }
@@ -44,7 +47,7 @@ body {
 .load_more_link {
   font-size: 1.8rem;
   margin: 0.5rem 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(47, 23, 147);
   padding: 0.5rem 1rem;
   background: transparent;
   max-width: 400px;
@@ -52,15 +55,17 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
-.load_more {
-  color: #ec619f !important;
-}
 .load_more_link {
   text-decoration: none !important;
-  color: #ec619f !important;
+  color: red !important;
+}
+.load_more {
+  color: rgba(47, 23, 147) !important;
+}
+.load_more_link {
+  color: rgba(47, 23, 147) !important;
 }
 .load_more_link:hover,
 .load_more:hover {
-  text-decoration: none !important;
-  color: var(--text-color) !important;
+  color: rgba(47, 23, 147) !important;
 }

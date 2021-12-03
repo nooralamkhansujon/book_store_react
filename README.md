@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# For district,division,upozila database go to below link
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[db link](https://github.com/nuhil/bangladesh-geocode).
 
 ## Available Scripts
 

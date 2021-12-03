@@ -3,6 +3,7 @@ import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
 import { Grid } from "@mui/material";
 import Checkbox from "@mui/material/Checkbox";
+import { NavLink } from "react-router-dom";
 import styles from "../styles/Cart.module.css";
 import { CartCartSummery, CartSingleCart } from "../components";
 const label = { inputProps: { "aria-label": "All" } };
@@ -21,16 +22,20 @@ function Cart() {
           <Card>
             <Box
               className={`${styles.CartTopHeader}`}
-              sx={{ display: "flex", justifyContent: "space-between",alignItems:"center" }}
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+              }}
             >
               <div className={`${styles.rememberMe}`}>
                 <Checkbox
                   {...label}
                   onClick={checkedAll}
                   sx={{
-                    color: "#ec619f",
+                    color: "rgba(47, 23, 147)",
                     "&.Mui-checked": {
-                      color: "#ec619f",
+                      color: "rgba(47, 23, 147)",
                     },
                   }}
                 />
@@ -60,8 +65,15 @@ function Cart() {
             <div className={styles.card_footer}>
               <p>একসাথে যত খুশি পণ্য অর্ডার করুন, শিপিং চার্জ মাত্র 50 টাকা</p>
               <div className={styles.button_group}>
-                <button className={styles.button}>Order as Gift</button>
-                <button className={styles.button}>Go To Shipping Page</button>
+                <NavLink to="/OrderAsGift" className={styles.order_as_gift}>
+                  Order as Gift
+                </NavLink>
+                <NavLink
+                  to="/ShippingPage"
+                  className={styles.shipping_page_link}
+                >
+                  Go To Shipping Page{" "}
+                </NavLink>
               </div>
             </div>
           </Card>

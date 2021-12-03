@@ -20,6 +20,10 @@ import {
   BookDetails,
   Profile,
   InstitutionalOrder,
+  OrderAsGift,
+  ShippingPage,
+  BorrowBooks,
+  GiveWayBooks,
 } from "./pages/";
 import "./index.css";
 function App() {
@@ -53,6 +57,10 @@ function App() {
               element={<ProfileMyRatingReviews />}
             />
           </Route>
+          <Route path="OrderAsGift" element={<OrderAsGift />} />
+          <Route path="ShippingPage" element={<ShippingPage />} />
+          <Route path="BorrowBooks" element={<BorrowBooks />} />
+          <Route path="GiveWayBooks" element={<GiveWayBooks />} />
         </Routes>
       </main>
       <Footer />

@@ -7,6 +7,7 @@ import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 const label = { inputProps: { "aria-label": "Register Seller" } };
+
 function RegisterSeller() {
   const [category, setCategory] = React.useState();
   const [authorName, setAuthorName] = React.useState();
@@ -94,9 +95,9 @@ function RegisterSeller() {
                 {...label}
                 onClick={(e) => setStatus(e.target.value)}
                 sx={{
-                  color: "#ec619f",
+                  color: "rgba(47, 23, 147)",
                   "&.Mui-checked": {
-                    color: "#ec619f",
+                    color: "rgba(47, 23, 147)",
                   },
                 }}
               />

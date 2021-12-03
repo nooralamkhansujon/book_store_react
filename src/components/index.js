@@ -12,3 +12,5 @@ export { default as ProfileMyRatingReviews } from "./profile/MyRatingReviews.jsx
 export { default as ProfileMyRokomariBalance } from "./profile/MyRokomariBalance.jsx";
 export { default as ProfileWishList } from "./profile/WishList.jsx";
 export { default as ProfileOrders } from "./profile/Orders.jsx";
+export { default as InstitutionalOrderSingleCard } from "./institutional_order/SingleCard.jsx";
+export { default as InstitutionalOrderCarousel } from "./institutional_order/Carousel.jsx";

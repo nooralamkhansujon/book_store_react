@@ -15,8 +15,7 @@
   margin: 2rem auto;
   padding: 1rem;
   text-align: center;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(236, 97, 169, 0.1)),
-    var(--tw-ring-shadow, 0 0 rgba(236, 97, 169, 0.1)), var(--tw-shadow);
+  box-shadow: 0 20px 25px -5px rgba(47, 23, 147, 0.1);
   background: #fff;
   border-radius: 10px;
 }
@@ -55,8 +54,7 @@
   font-size: 1.2rem;
   margin-top: 0.5rem;
   cursor: pointer;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  box-shadow: 0 20px 25px -5px rgba(47, 23, 147, 0.1);
 }
 .form_group {
   margin: 0.3rem auto;
@@ -78,12 +76,9 @@
   padding: 1rem 1rem;
   outline: none;
   border: 1px solid rgba(236, 97, 169, 0.1);
-  /* border-color: #ec619f !important; */
   border-radius: 5px;
-  /* border: none !important; */
   width: 60%;
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(236, 97, 169, 0.1)),
-    var(--tw-ring-shadow, 0 0 rgba(236, 97, 169, 0.1)), var(--tw-shadow);
+  box-shadow: 0 20px 25px -5px rgba(47, 23, 147, 0.1);
 }
 
 .rememberMe {

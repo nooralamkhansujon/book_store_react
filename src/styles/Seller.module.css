@@ -5,8 +5,7 @@
 }
 
 .tabColor {
-  /* color: var(--text-color) !important; */
-  color: #ec619f !important;
+  color: rgba(47, 23, 147) !important;
 }
 
 .seller_components {
@@ -22,10 +21,10 @@
 }
 
 .title {
-  color: var(--text-color) !important;
+  color: rgba(47, 23, 147) !important;
   font-size: 1.5rem !important;
   text-decoration: none !important;
-  border-bottom: 3px solid var(--border-color) !important;
+  border-bottom: 3px solid rgba(47, 23, 147) !important;
 }
 
 .seller_header {
@@ -39,9 +38,9 @@
 
 .button {
   color: #fff !important;
-  background: var(--button-bg) !important;
+  background: rgba(47, 23, 147) !important;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(47, 23, 147);
   outline: none;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -69,8 +68,7 @@
 .form_group input {
   padding: 1rem 1rem;
   outline: none;
-  border: 1px solid rgba(236, 97, 169, 0.1);
-  /* border-color: #ec619f !important; */
+  border: 1px solid rgba(47, 23, 147, 0.5);
   border-radius: 5px;
   /* border: none !important; */
   width: 60%;
@@ -86,12 +84,12 @@
 }
 .rememberMe input[type="checkbox"] {
   margin-right: 10px;
-  background: #ec619f !important;
+  background: rgba(47, 23, 147) !important;
 }
 
 .selectBox {
   width: 60%;
   margin-top: 10px;
   height: 40px;
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
 }

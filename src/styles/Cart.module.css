@@ -9,7 +9,7 @@
 }
 .rememberMe input[type="checkbox"] {
   margin-right: 10px;
-  background: #ec619f !important;
+  background: rgba(47, 23, 147) !important;
 }
 
 .rememberMe label {
@@ -45,7 +45,6 @@
   padding: 1rem 1rem;
   outline: none;
   border: 1px solid rgba(236, 97, 169, 0.1);
-  /* border-color: #ec619f !important; */
   border-radius: 5px;
   /* border: none !important; */
   width: 60%;
@@ -55,7 +54,7 @@
 
 .cart_content h3 {
   color: var(--global-text-color);
-  font-size:1.2rem !important;
+  font-size: 1.2rem !important;
 }
 .weight {
   color: lightgreen;
@@ -83,14 +82,13 @@
 }
 .payable_total {
   font-weight: bold;
-  color: #ec619f;
+  color: rgba(47, 23, 147);
 }
 
 .button {
   border-radius: 5px;
-  /* background: #ec619f; */
   background: transparent;
-  color: #ec619f;
+  color: rgba(47, 23, 147);
   font-size: 0.8rem;
   border: none;
   cursor: pointer;
@@ -140,20 +138,25 @@
   margin-top: 0.5rem;
 }
 
-.button_group button {
+.button_group .shipping_page_link,
+.button_group .order_as_gift {
   padding: 1rem 1rem;
-  color: var(--text-color);
-  font-size: 1.2rem;
-}
-.button_group button:first-child {
-  border: 1px solid #ec619f;
-  color: #ec619f;
-}
-.button_group button:first-child:hover {
-  background: #ec619f;
   color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
 }
-.button_group button:last-child {
+.button_group .order_as_gift {
+  border: 1px solid rgba(47, 23, 147);
+  color: #fff;
+  background: rgba(47, 23, 147);
+}
+.button_group .order_as_gift:hover {
+  background: #fff;
+  color: rgba(47, 23, 147);
+  border: 1px solid rgba(47, 23, 147) !important;
+}
+.button_group .shipping_page_link {
   background: var(--text-color);
   color: #fff;
   border: 1px solid var(--text-color);

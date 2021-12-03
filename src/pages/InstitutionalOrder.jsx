@@ -7,6 +7,11 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
 import SellSharpIcon from "@mui/icons-material/SellSharp";
 import LocalShippingSharpIcon from "@mui/icons-material/LocalShippingSharp";
+import {
+  InstitutionalOrderSingleCard,
+  InstitutionalOrderCarousel,
+} from "../components/";
+
 function InstitutionalOrder() {
   return (
     <div className="container">
@@ -31,7 +36,7 @@ function InstitutionalOrder() {
             Request A Quote
           </button>
           <span className="btn btn-info btn-sm">OR</span>
-          <p
+          <div
             style={{ marginLeft: "10px" }}
             className=" d-flex flex-row align-items-center"
           >
@@ -47,7 +52,7 @@ function InstitutionalOrder() {
               <span>&nbsp;+8801708166242&nbsp;</span>{" "}
               <span>&nbsp;(9.00AM - 7.00PM)</span>
             </p>
-          </p>
+          </div>
         </Box>
       </Box>
       <Box className={styles.why_choose_us}>
@@ -56,52 +61,45 @@ function InstitutionalOrder() {
         </Typography>
         <Grid container rowSpacing={1} columnSpacing={1}>
           <Grid item md={4}>
-            <Card className={styles.single_card_content}>
-              <div className={styles.single_choose_image_section}>
-                <MenuBookIcon className={styles.single_choose_image} />
-              </div>
-              <p className={styles.single_choose_title}>
-                {" "}
-                Largest Book Collection
-              </p>
-              <p className={styles.single_choose_description}>
-                Reading book is a wonderful experience and there's an explorer
-                in all of us who shouldn't be lost at any cost. We offer
-                splendid discounts on bulk purchases
-              </p>
-            </Card>
+            <InstitutionalOrderSingleCard
+              title="Largest Book Collection"
+              content={`Reading book is a wonderful experience and there's an explorer in all of
+        us who shouldn't be lost at any cost. We offer splendid discounts on
+        bulk purchases`}
+            >
+              {/* pass only icon  as a child */}
+              <MenuBookIcon className={styles.single_choose_image} />
+            </InstitutionalOrderSingleCard>
           </Grid>
           <Grid item md={4}>
-            <Card className={styles.single_card_content}>
-              <div className={styles.single_choose_image_section}>
-                <SellSharpIcon className={styles.single_choose_image} />
-              </div>
-              <p className={styles.single_choose_title}>Best Price</p>
-              <p className={styles.single_choose_description}>
-                Reading book is a wonderful experience and there's an explorer
+            <InstitutionalOrderSingleCard
+              title="Best Price"
+              content={`Reading book is a wonderful experience and there's an explorer
                 in all of us who shouldn't be lost at any cost. We offer
-                splendid discounts on bulk purchases
-              </p>
-            </Card>
+                splendid discounts on bulk purchases`}
+            >
+              <SellSharpIcon className={styles.single_choose_image} />
+            </InstitutionalOrderSingleCard>
           </Grid>
           <Grid item md={4}>
-            <Card className={styles.single_card_content}>
-              <div className={styles.single_choose_image_section}>
-                <LocalShippingSharpIcon
-                  className={styles.single_choose_image}
-                />
-              </div>
-              <p className={styles.single_choose_title}>On Time Delivery</p>
-              <p className={styles.single_choose_description}>
-                On Time 24/7 Delivery is available to meet your unique on-demand
+            <InstitutionalOrderSingleCard
+              title="On Time Delivery"
+              content={`On Time 24/7 Delivery is available to meet your unique on-demand
                 and scheduled delivery needs. Our professional executives and
                 friendly customer service will ensure your books are delivered
-                reliability to their destination and it will be free of cost.
-              </p>
-            </Card>
+                reliability to their destination and it will be free of cost.`}
+            >
+              <LocalShippingSharpIcon className={styles.single_choose_image} />
+            </InstitutionalOrderSingleCard>
           </Grid>
         </Grid>
       </Box>
+
+      <Grid container>
+        <Grid item md={12}>
+          {/* <InstitutionalOrderCarousel /> */}
+        </Grid>
+      </Grid>
     </div>
   );
 }
