@@ -5,7 +5,13 @@ import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import { NavLink } from "react-router-dom";
 import styles from "../../styles/Home.module.css";
-function Books({ title, books, load }) {
+function Books({
+  title,
+  books,
+  load,
+  borrowBook = false,
+  giveWayBooks = false,
+}) {
   function onClickItem(event) {
     console.log(event);
   }
@@ -24,10 +30,14 @@ function Books({ title, books, load }) {
       <Typography className="global_title" variant="h4">
         {title}
       </Typography>
-      <Grid container rowSpacing={1} columnSpacing={1}>
+      <Grid container rowSpacing={2} columnSpacing={1}>
         {books.map((book, index) => (
           <Grid item md={3} key={index}>
-            <Book book={book} />
+            <Book
+              book={book}
+              borrowBook={borrowBook}
+              giveWayBooks={giveWayBooks}
+            />
           </Grid>
         ))}
       </Grid>

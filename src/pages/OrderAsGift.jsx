@@ -1,12 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Card, Typography, Grid, Box, Checkbox, Radio } from "@mui/material";
 import styles from "../styles/OrderAsGift.module.css";
 function OrderAsGift() {
+  const [districts, setDistricts] = useState([]);
+  const [upozilas, setUpozilas] = useState([]);
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "instant",
     });
+    async function fetchDistricts() {
+      const response = await fetch(`http://localhost:3001/districts`);
+      const data = await response.json();
+      setDistricts(data);
+    }
+    async function fetchArea() {
+      const response = await fetch(`http://localhost:3001/upozilas`);
+      const data = await response.json();
+      setUpozilas(data);
+    }
+    fetchDistricts();
+    fetchArea();
   }, []);
   return (
     <div className="container">
@@ -86,10 +100,7 @@ function OrderAsGift() {
                           onChange={(event) => console.log(event.target.value)}
                           className={`${styles.input} p-3`}
                         >
-                          <option value="">None</option>
-                          <option value="ten">Ten</option>
-                          <option value="2">Twenty</option>
-                          <option value="3">Select Category</option>
+                          <option value="bangladesh">Bangladesh</option>
                         </select>
                       </div>
                     </Grid>
@@ -103,10 +114,11 @@ function OrderAsGift() {
                           onChange={(event) => console.log(event.target.value)}
                           className={`${styles.input} p-3`}
                         >
-                          <option value="">None</option>
-                          <option value="ten">Ten</option>
-                          <option value="20">Twenty</option>
-                          <option value="30">Select Category</option>
+                          {districts.map((district, index) => (
+                            <option key={index} value={district.bn_name}>
+                              {district.bn_name}
+                            </option>
+                          ))}
                         </select>
                       </div>
                     </Grid>
@@ -120,10 +132,11 @@ function OrderAsGift() {
                           onChange={(event) => console.log(event.target.value)}
                           className={`${styles.input} p-3`}
                         >
-                          <option value="">None</option>
-                          <option value="ten">Ten</option>
-                          <option value="200">Twenty</option>
-                          <option value="20">Select Category</option>
+                          {upozilas.map((upozila, index) => (
+                            <option key={index} value={upozila.bn_name}>
+                              {upozila.bn_name}
+                            </option>
+                          ))}
                         </select>
                       </div>
                     </Grid>
@@ -188,10 +201,7 @@ function OrderAsGift() {
                           onChange={(event) => console.log(event.target.value)}
                           className={`${styles.input} p-3`}
                         >
-                          <option value="">None</option>
-                          <option value="ten">Ten</option>
-                          <option value="2">Twenty</option>
-                          <option value="3">Select Category</option>
+                          <option value="bangladesh">Bangladesh</option>
                         </select>
                       </div>
                     </Grid>
@@ -205,10 +215,11 @@ function OrderAsGift() {
                           onChange={(event) => console.log(event.target.value)}
                           className={`${styles.input} p-3`}
                         >
-                          <option value="">None</option>
-                          <option value="ten">Ten</option>
-                          <option value="20">Twenty</option>
-                          <option value="30">Select Category</option>
+                          {districts.map((district, index) => (
+                            <option key={index} value={district.bn_name}>
+                              {district.bn_name}
+                            </option>
+                          ))}
                         </select>
                       </div>
                     </Grid>
@@ -222,10 +233,11 @@ function OrderAsGift() {
                           onChange={(event) => console.log(event.target.value)}
                           className={`${styles.input} p-3`}
                         >
-                          <option value="">None</option>
-                          <option value="ten">Ten</option>
-                          <option value="200">Twenty</option>
-                          <option value="20">Select Category</option>
+                          {upozilas.map((upozila, index) => (
+                            <option key={index} value={upozila.bn_name}>
+                              {upozila.bn_name}
+                            </option>
+                          ))}
                         </select>
                       </div>
                     </Grid>

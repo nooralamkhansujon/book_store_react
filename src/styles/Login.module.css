@@ -6,7 +6,7 @@
 
 .tabColor {
   /* color: var(--text-color) !important; */
-  color: #ec619f !important;
+  color: rgba(47, 23, 147) !important;
 }
 
 .login_components {
@@ -26,7 +26,7 @@
   text-decoration: none !important;
 }
 .title:hover {
-  color: #ec619f !important;
+  color: rgba(47, 23, 147) !important;
   text-decoration: none !important;
 }
 
@@ -35,8 +35,8 @@
   justify-content: center;
 }
 .active {
-  color: #ec619f !important;
-  border-bottom: 3px solid var(--border-color) !important;
+  color: rgba(47, 23, 147) !important;
+  border-bottom: 3px solid rgba(47, 23, 147) !important;
   padding-bottom: 0.5rem;
 }
 .login_body {
@@ -46,9 +46,9 @@
 
 .button {
   color: #fff !important;
-  background: var(--button-bg) !important;
+  background: rgba(47, 23, 147) !important;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(47, 23, 147);
   outline: none;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -86,5 +86,5 @@
 }
 .rememberMe input[type="checkbox"] {
   margin-right: 10px;
-  background: #ec619f !important;
+  background: rgba(47, 23, 147) !important;
 }

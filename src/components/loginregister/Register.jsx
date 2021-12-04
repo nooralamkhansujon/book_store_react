@@ -22,9 +22,9 @@ function Register() {
         <Checkbox
           {...label}
           sx={{
-            color: "#ec619f",
+            color: " rgba(47, 23, 147)",
             "&.Mui-checked": {
-              color: "#ec619f",
+              color: " rgba(47, 23, 147)",
             },
           }}
         />

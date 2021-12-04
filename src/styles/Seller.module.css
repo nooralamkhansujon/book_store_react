@@ -49,14 +49,35 @@
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.form_group {
+.form_group,
+.form_group_radio {
   margin: 0.3rem auto;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: space-evenly;
-  width: 80%;
+  width: 100%;
 }
+.form_group_radio label {
+  width: 40%;
+  font-size: 1rem;
+  color: var(--text-color);
+  padding-left: 2rem;
+  width: 40%;
+  text-align: left;
+}
+.form_group_radio {
+  width: 100%;
+}
+.radio_box_container {
+  width: 60%;
+  display: flex;
+}
+
+.radio_input {
+  margin-right: 5px;
+}
+
 .form_group label {
   font-size: 1rem;
   color: var(--text-color);

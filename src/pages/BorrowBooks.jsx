@@ -39,7 +39,7 @@ const newBooks = [
     image: "11.jpg",
     book_title: "Learn with Javascript Visually",
     writer: "E.Balagurusamy",
-    disCount: false,
+    disCount: true,
     discountPrice: 250,
     price: 285,
     stock: false,
@@ -86,7 +86,7 @@ const BuyBooks = [
     book_title: "Coe Java Simply in Depth",
     writer: "E.Ajit Singh",
     disCount: true,
-    discountPrice: 300,
+    discountPrice: 50,
     price: 400,
     stock: false,
     status: true,
@@ -96,8 +96,8 @@ const BuyBooks = [
     image: "13.jpg",
     book_title: "Javascript For Beginners",
     writer: "JOHN J.Maldonado",
-    disCount: false,
-    discountPrice: 300,
+    disCount: true,
+    discountPrice: 50,
     price: 400,
     stock: false,
     status: true,
@@ -107,8 +107,8 @@ const BuyBooks = [
     image: "14.jpg",
     book_title: "Coffee Break Python",
     writer: "Christian Mayer",
-    disCount: false,
-    discountPrice: 300,
+    disCount: true,
+    discountPrice: 50,
     price: 400,
     stock: false,
     status: true,
@@ -118,8 +118,8 @@ const BuyBooks = [
     image: "15.jpg",
     book_title: "Linux for Beginners",
     writer: "Michael Clark",
-    disCount: false,
-    discountPrice: 300,
+    disCount: true,
+    discountPrice: 50,
     price: 400,
     stock: false,
     status: true,
@@ -129,8 +129,8 @@ const BuyBooks = [
     image: "17.jpg",
     book_title: "The Pragmatic Programmer",
     writer: "Andrew Hunt",
-    disCount: false,
-    discountPrice: 300,
+    disCount: true,
+    discountPrice: 50,
     price: 400,
     stock: false,
     status: true,
@@ -145,7 +145,14 @@ function BorrowBooks() {
       behavior: "instant",
     });
   }, []);
-  return <HomeBook books={newBooksList} title="Borrow Books" load={true} />;
+  return (
+    <HomeBook
+      books={BuyBookList}
+      borrowBook={true}
+      title="Borrow Books"
+      load={true}
+    />
+  );
 }
 
 export default BorrowBooks;

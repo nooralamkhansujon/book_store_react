@@ -1,7 +1,11 @@
 .footer {
   /* margin: 1.5rem; */
   /* background: #20232a; */
-  background: linear-gradient(to left, rgba(20, 56, 92), rgba(20, 56, 92, 0.9));
+  background: linear-gradient(
+    to left,
+    rgba(47, 23, 147),
+    rgba(47, 23, 147, 0.9)
+  );
 }
 
 .footer_container {
@@ -31,9 +35,9 @@
 
 .button {
   color: #fff !important;
-  background: var(--button-bg) !important;
+  background: #24dbc4 !important;
   padding: 0.7rem 1.5rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid #24dbc4;
   outline: none;
   border-radius: 5px;
   font-size: 1.2rem;

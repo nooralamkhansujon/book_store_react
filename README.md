@@ -2,9 +2,9 @@
 
 [db link](https://github.com/nuhil/bangladesh-geocode).
 
-## Available Scripts
+## run this code in terminal for getting districts,upozilas data
 
-In the project directory, you can run:
+json-server.cmd --watch data/db.json --port 3001
 
 ### `yarn start`
 

@@ -17,7 +17,7 @@ function MyRokomariBalance() {
             You can pay using your Rokomari Balance when you buy any product:
           </p>
         </div>
-        <button className={styles.change_info}>change Information</button>
+        {/* <button className={styles.change_info}>change Information</button> */}
       </div>
       <div className={styles.card_body}>
         <Card>0 Balance Now</Card>

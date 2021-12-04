@@ -1,9 +1,14 @@
 import React, { useEffect } from "react";
-import Container from "@mui/material/Container";
-import Checkbox from "@mui/material/Checkbox";
-import Typography from "@mui/material/Typography";
+import {
+  RadioGroup,
+  Container,
+  Select,
+  Checkbox,
+  Typography,
+  Radio,
+  FormControlLabel,
+} from "@mui/material";
 import styles from "../styles/Seller.module.css";
-import Select from "@mui/material/Select";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 const label = { inputProps: { "aria-label": "Register Seller" } };
@@ -69,6 +74,32 @@ function RegisterSeller() {
               <label>Book Image</label>
               <input type="file" onChange={handleImage} />
             </div>
+            <div className={`${styles.form_group_radio} py-3`}>
+              <label>Book Seller Type</label>
+              <div className={`${styles.radio_box_container}`}>
+                <RadioGroup
+                  row
+                  aria-label="gender"
+                  name="row-radio-buttons-group"
+                >
+                  <FormControlLabel
+                    value="None"
+                    control={<Radio />}
+                    label="None"
+                  />
+                  <FormControlLabel
+                    value="Borrow"
+                    control={<Radio />}
+                    label="Borrow"
+                  />
+                  <FormControlLabel
+                    value="GiveWay"
+                    control={<Radio />}
+                    label="GiveWay"
+                  />
+                </RadioGroup>
+              </div>
+            </div>
             <div className={`${styles.form_group}`}>
               <InputLabel id="demo-simple-select-standard-label">
                 Select Category
@@ -85,9 +116,11 @@ function RegisterSeller() {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Select Category</MenuItem>
+                <MenuItem value="academic">Academic</MenuItem>
+                <MenuItem value="medical">Medical</MenuItem>
+                <MenuItem value="engineering">Engineering</MenuItem>
+                <MenuItem value="school_collage">School/Collage</MenuItem>
+                <MenuItem value="novel">Novel</MenuItem>
               </Select>
             </div>
             <div className={`${styles.rememberMe}`}>

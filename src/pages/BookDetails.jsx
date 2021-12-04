@@ -120,15 +120,22 @@ const BuyBooks = [
 function BookDetails() {
   const [anchorEl, setsetAnchorEl] = React.useState(false);
   const [openBar, setOpenBar] = React.useState(false);
+  const [BuyBookList, setBuyBookList] = React.useState(BuyBooks);
   const { book_id } = useParams();
   const open = Boolean(anchorEl);
-  const [BuyBookList, setBuyBookList] = React.useState(BuyBooks);
-
+  const [districts, setDistricts] = React.useState([]);
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "instant",
     });
+    async function fetchDistricts() {
+      const response = await fetch(`http://localhost:3001/districts`);
+      const data = await response.json();
+      setDistricts(data);
+      console.log(data);
+    }
+    fetchDistricts();
   }, []);
   const handleClose = () => {
     setsetAnchorEl(null);
@@ -328,9 +335,11 @@ function BookDetails() {
                 <MenuItem selected value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value="bangladesh">Bangladesh</MenuItem>
-                <MenuItem value="america">America</MenuItem>
-                <MenuItem value="india">India</MenuItem>
+                {districts.map((district, index) => (
+                  <MenuItem key={index} value={district.bn_name}>
+                    {district.bn_name}
+                  </MenuItem>
+                ))}
               </Select>
             </Box>
             <Box className={`${styles.priceContent}`}>

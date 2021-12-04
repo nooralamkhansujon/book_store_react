@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Card, Typography, Grid, Box, Checkbox, Radio } from "@mui/material";
+import { Card, Typography, Grid, Box, Checkbox } from "@mui/material";
 import MoneyIcon from "@mui/icons-material/Money";
 import styles from "../styles/OrderAsGift.module.css";
 function OrderAsGift() {
@@ -83,10 +83,7 @@ function OrderAsGift() {
                           onChange={(event) => console.log(event.target.value)}
                           className={`${styles.input} p-3`}
                         >
-                          <option value="">None</option>
-                          <option value="ten">Ten</option>
-                          <option value="2">Twenty</option>
-                          <option value="3">Select Category</option>
+                          <option value="bangladesh">Bangladesh</option>
                         </select>
                       </div>
                     </Grid>

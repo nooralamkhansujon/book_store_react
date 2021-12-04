@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import styles from "../../styles/Home.module.css";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-function Book({ book }) {
+function Book({ book, borrowBook, giveWayBooks }) {
   const { id, image, book_title, disCount, discountPrice, price, stock } = book;
   console.log(book);
 
@@ -36,16 +36,21 @@ function Book({ book }) {
           </Typography>
         </Link>
         <div className={styles.book_price_content}>
-          <p className={styles.price}>
-            {disCount ? (
-              <>
-                <span>Tk: {discountPrice}</span>
-                <strike>Tk: {price}</strike>
-              </>
-            ) : (
-              <span>Tk: {price}</span>
-            )}
-          </p>
+          {borrowBook ? (
+            <p>Borrow Book</p>
+          ) : (
+            <p className={styles.price}>
+              {disCount ? (
+                <>
+                  <span>Tk: {discountPrice}</span>
+                  <strike>Tk: {price}</strike>
+                </>
+              ) : (
+                <span>Tk: {price}</span>
+              )}
+            </p>
+          )}
+
           {stock ? (
             <span className={styles.stock_status_active}>in Stock</span>
           ) : (
@@ -54,10 +59,16 @@ function Book({ book }) {
         </div>
       </CardContent>
       <CardActions className={styles.cartButtons}>
-        <Button size="small">Add To Cart</Button>
-        <Button title="wish list" size="small">
-          <FavoriteIcon />
-        </Button>
+        {borrowBook || giveWayBooks ? (
+          <Button size="small">Request To Authors</Button>
+        ) : (
+          <>
+            <Button size="small">Add To Cart</Button>
+            <Button title="wish list" size="small">
+              <FavoriteIcon />
+            </Button>
+          </>
+        )}
       </CardActions>
     </Card>
   );
